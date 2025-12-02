@@ -39,6 +39,13 @@ def prepare_dataset_for_training(
     if mode == "post_qualifying":
         # 1a. Fetch Qualifying lap data for post-Q features
         print("Fetching Qualifying lap data for feature engineering...")
+
+        try:
+            qualifying_laps = fetch_session_data(year, gp_identifier, "Q")
+        except Exception as e:
+            print(f"Error fetching Q data for {year} {gp_identifier}: {e}. Skipping event.")
+            return pd.DataFrame()
+            
         qualifying_laps = fetch_session_data(year, gp_identifier, "Q")
         if qualifying_laps.empty:
             print(

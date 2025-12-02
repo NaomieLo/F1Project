@@ -562,7 +562,7 @@ if __name__ == "__main__":
     # For this example, let's manually set it.
     # In a real scenario, you might fetch the schedule and find the next event.
     predict_year = 2025  # Assuming today is before Emilia Romagna 2025
-    predict_gp_name = "Emilia Romagna Grand Prix"  # Use the official event name from fastf1.get_event_schedule()
+    predict_gp_name = "Qatar Grand Prix"  # Use the official event name from fastf1.get_event_schedule()
     # Or use round number if known and more reliable:
     # predict_gp_identifier = 7 # Example: If Emilia Romagna is Round 7 in 2025
 
